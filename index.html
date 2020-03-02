@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokemon Vue</title>
+
+    <link rel="icon" href="images/pokeball2.png" type="image/png" sizes="16x16">
+    <link property="stylesheet" href="styles.css" rel="stylesheet">
+    <link property="stylesheet" href="plugins/magnific.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div class="app-wrapper">
+
+
+
+
+        <div class="pokemon app" v-cloak>
+
+
+    <!--  -->
+
+            <a href="#end-popup" class="open-popup-link">Show inline popup</a>
+
+            <div class="end-popup mfp-hide" id="end-popup" >
+                <img class="end-popup__logo" src="images/logo-vue.png">
+                <p class="end-popup__thanks">Поздравляю, покемастер! <br> Спасибо тебе за игру! 😊 </p>
+                <h4 class="end-popup__print" onclick="window.print();"> Скачай своих покемонов</h4>
+                <a class="end-popup__music" href="music/8-bit-universe-pokemon-theme.mp4" download>Скачай музыку</a>
+                <a class="end-popup__author" @click='copyAddress'>Напиши автору</a>
+                <input type="text" class="email-address" value='2surfingbirds@gmail.com'>
+                <a class="end-popup__play" onclick="location.reload()" >Играй снова</a>
+            </div>
+
+    <!--  -->
+
+
+            
+            <div class="pokemon__item pokemon__item-save">
+                <button  class="save-btn" @click="save" >Поймать</button>
+
+                <button class="pet-btn save-btn" @click="pet" >Погладить</button>
+            </div>
+
+            <div class="pokemon__item">
+
+                <button @click="showRandom()" >Искать покемона</button>
+
+                <transition name="fade" mode="out-in" >
+                    <p :key="userPokemon"> {{ userPokemon }} </p>
+                </transition>
+
+                <transition name="fade" mode="out-in" >
+                    <img class="pokemon__image" v-if="pokemonImage" :src="pokemonImage" :key="pokemonImage" >
+                </transition>
+
+                <button class="evo-btn" @click="showEvo" >Прокачать</button>
+
+            </div>
+
+            <div class="pokemon__item">
+
+                <button class="sound-btn" >Музыка</button>
+
+                <audio class="music-box" loop volume="0.1" >
+                    <source src="music/8-bit-universe-pokemon-theme.mp4" type="audio/mp4">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <div class="pokemon__stats">
+
+                    <p>Сила:
+                        <transition name="fade" mode="out-in" >
+                            <span :key="userPokemon"> {{ strength }} </span>
+                        </transition>
+                    </p>
+
+                    <p>Скорость:
+                        <transition name="fade" mode="out-in" >
+                            <span :key="userPokemon"> {{ speed }} </span>
+                        </transition>
+                    </p>
+
+                    <p>Аппетит:
+                        <transition name="fade" mode="out-in" >
+                            <span :key="userPokemon"> {{ food }} </span>
+                        </transition>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pokemon__exp-wrapper">
+
+                <div class="pokemon__exp-total">
+
+                    <div class="pokemon__exp-current"></div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/magnific.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+
+
+</html>

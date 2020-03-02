@@ -1,0 +1,315 @@
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+.fade-enter-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+@font-face {
+  font-family: "8BITWONDERRUSBYLYAJKA-Nominal";
+  src: url("./fonts/10967.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/10967.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/10967.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/10967.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/10967.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/10967.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/10967.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+*:hover {
+    cursor: default;
+}
+
+html, body{
+    height: 70vh;
+    
+}
+#outer{
+    min-height: 70vh;
+}
+
+body {
+    min-width: 840px;
+    font-size: 20px;
+    font-family: "8BITWONDERRUSBYLYAJKA-Nominal";
+    color: gainsboro;
+    background: darkcyan;
+    -webkit-print-color-adjust: exact;
+}
+
+.app-wrapper {
+    background: darkcyan;
+    height: 100%;
+    width: 100%;
+}
+
+.app {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 0px
+}
+
+.pokemon__item {
+    position: relative;
+    width: 220px;
+    height: 500px;
+    margin: 0 30px;
+
+}
+
+.pokemon__exp-wrapper {
+    flex-basis: 100%;
+    text-align: left;
+}
+
+.pokemon__exp-total {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    align-content: center;
+    width: 570px;
+    height: 17px;
+    font-size: 10px;
+    margin: 30px auto;
+    background: #1A6868
+}
+
+.pokemon__exp-total:before {
+    content: 'Уровень';
+    display: inline-block;
+    margin-left: -87px
+}
+
+.pokemon__exp-total:after{
+    content: 'Новичок';
+    display: inline-block;
+    margin-left: 607px;
+    transition: all 0.6s;
+}
+
+.pokemon__exp-total.goodGuy:after{
+    content: 'Уверенный';
+    color: #63DC63;
+}
+
+.pokemon__exp-total.prettyGuy:after{
+    content: 'Профи';
+    color: #E86900;
+}
+
+.pokemon__exp-total.master:after{
+    content: 'Покемастер';
+    color: #103A9B;
+}
+
+.pokemon__exp-total.god:after{
+    content: 'Бог';
+    font-size: 20px;
+    color: inherit;
+    margin-top: -3px;
+}
+
+
+
+.pokemon__exp-current {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 17px;
+    margin: 0 auto;
+    background: #31C5C5;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: 212px;
+    height: 106px;
+    font-size: 13px;
+    font-family: "8BITWONDERRUSBYLYAJKA-Nominal";
+    color: gainsboro;
+    padding: 30px;
+    background-color: brown;
+    border-radius: 4px;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.save-btn, .sound-btn {
+    height: 106px;
+    margin-bottom: 12.5px;
+}
+
+.pet-btn {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 84px;
+    margin-bottom: 0;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+.pokemon-image {
+    transition: all 1s;
+    transition-duration: 3s;
+}
+
+.sound-btn {
+    margin-bottom: 38.5px;
+}
+
+button:active {
+    background-color: rgba(165, 42, 42, 0.692);
+}
+
+.evo-btn {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 84px;
+    margin-bottom: 0;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+img {
+    width: 220px;
+    height: 220px;
+}
+
+.savedPokemon {
+    padding: 7px 0;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+.savedPokemon:hover {
+    cursor: pointer;
+}
+
+.savedPokemon__img {
+    display: none;
+}
+
+.pokemon__stats {
+    font-size: 17px;
+    text-align: left;
+    padding-top: 33px;
+}
+
+.open-popup-link {
+    position: absolute;
+    top: -3000px;
+}
+
+.end-popup {
+  position: relative;
+  background: darkcyan;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.end-popup__logo {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+
+.end-popup__thanks {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.end-popup__print, .end-popup__music, .end-popup__author, .end-popup__play {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: gainsboro;
+    margin: 20px 0
+}
+
+.end-popup__print {
+    margin-top: 40px;
+}
+
+a:hover, h4:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.2s;
+
+}
+
+.email-address {
+    position: absolute;
+    top: -1000px;
+}
+
+@media print {
+    .pokemon__item-save {
+        background-color: darkcyan;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 1043;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 15px;
+        font-size: 30px;
+        line-height: 18px;
+        padding: 40px 0;
+    }
+
+    .savedPokemon {
+        background: transparent !important;
+    }
+
+    .savedPokemon__img {
+        display: block;
+        width: 220px;
+        height: 220px;
+        margin: 0 auto;
+    }
+
+    button, .pet-btn, .save-btn {
+        display: none;
+        visibility: hidden;
+    }
+
+    @page {
+        size: A2 portrait;
+    }
+
+}

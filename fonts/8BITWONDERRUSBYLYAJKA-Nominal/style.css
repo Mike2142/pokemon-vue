@@ -1,0 +1,13 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "8BITWONDERRUSBYLYAJKA-Nominal";
+  src: url("./fonts/10967.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/10967.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/10967.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/10967.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/10967.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/10967.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/10967.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
