@@ -8,4 +8,5 @@
  - браузеры firefox, chrome, edge
  
  демо https://mike2142.github.io/pokemon-vue/
+ 
  автор 2surfingbirds@gmail.com
